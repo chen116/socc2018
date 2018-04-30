@@ -1,0 +1,53 @@
+\section{Related Work}
+
+% Connected car is a technology that is has been trying to make use of cloud computing \cite{cmu}\cite{mit} for offloading tasks. \cite{smallfogcar}
+% and fog computing\cite{fogcar}
+\label{s1}
+
+
+
+
+
+
+
+
+%The research challenges for load balancing comes with the heterogeneous and decentralized nature of fog computing. There are many existing works that aim to solve task distribution with different emphasis, application examples and solutions. 
+
+
+
+% Oueis et al. \cite{thef} solve the resource allocation problem for grid computing in a building. In grid computing, each node is connected wirelessly so the optimization formulation focus on both computational and radio resources allocation to minimize power consumption per node while satisfying all the latency constraints imposed by each node. The difference between our work and their work is that they put emphasis on radio resource allocation, impose only hard deadline constraint.
+
+
+
+
+In the work of Oueis et al. \cite{fogba}, they construct two optimization problems that minimize total transmitting power and total computation time respectively. In their work, tasks can be partitioned to servers and constrainted to hard deadlines, whereas tasks are indivisible and have soft deadlines in our work. Zeng et al. \cite{jopt} formulates a linear program that aims to minimize the average task completion time, but we also focus on avoiding missing deadlines for each task in our formulation.
+
+
+Hong et al. \cite{smallfogcar} propose a programming model that uses the workload to dynamically scale the fog system in order to provide enough resources. Their example applications include vehicle-to-vehicle video streaming and traffic monitoring. The difference between our work and theirs is our work consider deadline constraint and placements of individual task to the fog servers while theirs does not.
+
+
+Takayuki et al. \cite{serviceo} use routing for smart cars as the application that is being offloaded to the fog servers. Their load balancing optimization formulation focuses on minimizing aggregated task finishing time under an energy constraint. The difference between our work and theirs is that they do not impose capacity or resource constraint on the servers while we do. %They also do not consider the fact that a node assigned with multiple tasks will have a non-uniform response time to each task. 
+
+
+Hong et al. \cite{oppos} use the car's mobility patterns to predict its future location and then forward the tasks to the fog server that is associated with predicted location so the processing can start without any delay when the car arrives. The tasks include gathering and processing the data from local sensors. Their work has similar approach to our work in that they utilize mobility but their system focuses on only single client and does not impose capacity/resource constraints on the servers while we work with a multi-clients system that have various contraints on the servers. 
+
+% Deng et al. \cite{optimalw} suggest many different types of applications that can utilize fog computing for local processing such as geographically distributed applications such as pipeline monitoring networks and large-scale distributed control systems such as smart energy distribution, smart traffic lights and connected vehicles. They propose a load balancing optimization for optimal task placement in the fog nodes and remote cloud to minimize energy usage. The difference between our work and their work is that their formulation focuses more on minimizing power and has all tasks finish before deadline as constraints. 
+
+
+In the work of Wang et al. \cite{onlinep}, they use face recognition running on mobile devices as the motivating application. Their approach is to treat tasks coming from mobile devices as a tree graph, and then solve for the optimal matching of those task nodes to the physical nodes. Their solution is to assign weighted costs for placing an application node to a physical fog node then find the optimal mapping that minimizes total cost. The difference between our work and theirs is our work accounts for timing constraints and multi-user models while theirs does not.
+
+
+Li et al. \cite{energya} solve the problem of how to partition tasks for local servers and remote cloud to process and then allocate resource based on the partitioning. Video streaming on mobile devices is the example application. They propose an optimization formulation to minimize finishing time, cost of processing, and bandwidth usage. One major difference between our work and their work is that their formulation does not allow any deadline misses while our work tries to minimize deadline misses.
+
+
+
+
+
+
+
+
+
+
+
+
+

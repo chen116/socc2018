@@ -1,0 +1,147 @@
+\documentclass[10pt,conference,compsocconf]{./IEEEtran} 
+%\documentclass[10pt,conference]{IEEEtran} 
+
+\usepackage{setspace}
+%\usepackage[firstpage]{draftwatermark}
+\usepackage{epstopdf}
+\usepackage{times}
+\usepackage[table]{xcolor}
+%\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+%\usepackage{url}
+\usepackage{comment}
+%\usepackage[lofdepth,lotdepth]{subfig}
+%\usepackage{floatrow}
+\usepackage{graphicx}
+\usepackage{fancyvrb}
+\usepackage{listings}
+\usepackage{rotating}
+%\usepackage[usenames]{color}
+\usepackage{setspace}
+%\usepackage{tabularx,colortbl}
+%\usepackage{subfigure}
+\usepackage{subcaption}
+\usepackage[noadjust]{cite}
+\usepackage{multicol}
+%\usepackage[usenames]{color}
+%\usepackage{todonotes}
+%\usepackage{enumitem}
+
+
+\usepackage{amsmath}
+\usepackage{booktabs, multicol, multirow}
+
+% Used to balance last page
+% \usepackage{flushend}
+
+%\SetWatermarkText{PREPRINT}							
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+%see http://tex.stackexchange.com/questions/62720/vertical-space-after-algorithm
+\def\textfloatsep{6pt}
+\def\intextsep{6pt}
+\def\IEEEbibitemsep{0pt plus .5pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Program Float
+%
+\usepackage{float}
+
+\floatstyle{ruled}
+\newfloat{program}{thp}{lop}
+\floatname{program}{Program}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\title{{Load Balancing for Minimizing Deadline Misses and Total Runtime for Connected Car System in Fog Computing}}
+
+\author{
+% Author Block
+\IEEEauthorblockN{
+\phantom{xxx}Yu-An Chen\IEEEauthorrefmark{1},
+John Paul Walters\IEEEauthorrefmark{2}, and
+Stephen P. Crago\IEEEauthorrefmark{1}\IEEEauthorrefmark{2}\phantom{xxx}
+}
+\and
+\IEEEauthorblockN{
+}
+\and
+\IEEEauthorblockA{\IEEEauthorrefmark{1}Department of Electrical Engineering\\
+University of Southern California,
+Los Angeles, CA 90089\\
+Email: chen116@usc.edu}
+\and
+\IEEEauthorblockA{\IEEEauthorrefmark{2}Information Sciences Institute\\
+University of Southern California,
+Arlington, VA 22203\\
+Email: \{jwalters, crago\}@isi.edu}
+
+}
+% \author{
+
+
+% \IEEEauthorblockN{
+% %Geoffrey Phi C. Tran\IEEEauthorrefmark{1}\IEEEauthorrefmark{2},
+% \phantom{(Victor)}Yu-An Chen\IEEEauthorrefmark{2},
+% %Dong-In Kang\IEEEauthorrefmark{1}, 
+% % Mikyung Kang\IEEEauthorrefmark{1}, 
+% John Paul Walters\IEEEauthorrefmark{1}, and
+% Stephen P. Crago\IEEEauthorrefmark{1}\phantom{(Victor)}
+% }
+% % \and
+% % \IEEEauthorblockN{
+% % \phantom{(Victor)}
+% % }
+% % \IEEEauthorblockN{
+% % }
+% \and
+% \IEEEauthorblockA{\IEEEauthorrefmark{1}Information Sciences Institute\\
+% University of Southern California,
+% Arlington, VA 22203\\
+% Email: \{jwalters, crago\}@isi.edu}
+% % gtran dkang, mkkang, jwalters, crago
+% \and
+% \IEEEauthorblockA{\IEEEauthorrefmark{2}Department of Electrical Engineering\\
+% University of Southern California,
+% Los Angeles, CA 90089\\
+% Email: chen116@usc.edu}
+% % geoffret chen116
+
+% }
+
+\maketitle
+
+
+\begin{abstract}
+Cloud computing provides a pool of highly available resources for applications to offload their tasks to, but new applications such as coordinated lane change assistance used in connected car system have strict timing requirements that cannot be met by offloading tasks only to the cloud. Fog computing reduces latency by bringing the computation from remote datacenter to local fog servers, which are connected in close proximity with the clients.  Although fog computing lowers the latency for transferring data, load balancing among fog servers still needs to be addressed for better timing performance. The challenges include large number of tasks, mobility of the clients, and the heterogeneity of the fog servers. In this paper, using connected car systems as a motivating application, we first show that we can utilize mobility patterns of vehicles to perform periodic load balancing in fog servers. We then present a task model that solves the scheduling problem at the server level instead of device level. And finally we formulate a load balancing optimization problem for minimizing deadline misses and total runtime for connected car system in fog computing. We show that it outperforms some common heuristics such as weighted round robin, active monitoring, and throttled load balancer.
+
+\iffalse In fog computing, servers and the clients are connected in close proximity. Computation is brought from the remote datacenter to local servers, thus data can be processed and response faster. Applications cloud provides a pool of highly available resources for applications to offload their tasks to, but new applications such as coordinated lane change assistance for self-driving car has strict timing requirements that cannot be met by only running it in the cloud. Although fog computing lowers the latency for transferring data, load balancing and task distribution within local servers still need to be addressed for better timing performance. The challenges of minimizing deadline misses and runtime in fog computing come with the mobility of the clients, high number of tasks, and the heterogeneity of the local fog servers. In this paper, using lane change assistance for self-driving car as example application, we first show that we can use mobility of cars to perform periodic online scheduling in local servers. Secondly, we present a task scheduling model that can reduce the problem size. And finally we propose a task distribution optimization formulation that outperform commonly used load balancing algorithm such as weighted round robin, active monitoring, and throttled load balancer.
+\fi
+
+\iffalse Applications offload tasks to the cloud for its highly available resources and fast processing speed. But new applications such as coordinated lane change assistance for self-driving car has stricter timing requirements that cannot be met by offloading tasks to the cloud. In fog computing, fog servers and the clients are connected in close proximity. Computation is brought from the remote datacenter to local servers, thus data can be processed and response faster. The challenges of minimizing deadline misses and runtime in fog computing come with the mobility of the clients, high number of tasks, and the heterogeneity of the local fog servers. In this paper, using lane change assistance for self-driving car as example application, we first show that mobility of cars can be predicted with high accuracy ~95\% with a simple linear prediction mechanism.  Secondly, we present a task scheduling model that can reduce the problem size. And finally we propose a task distribution optimization formulation that outperform commonly used load balancing algorithm such as weighted round robin, active monitoring, and throttled load balancer.
+\fi
+
+
+\end{abstract}
+
+\begin{IEEEkeywords}
+fog computing; load balancing; real-time; task distribution; deadline misses; connected car; mobility prediction
+\end{IEEEkeywords}
+
+\input{intro}
+\input{related}
+\input{background}
+\input{setup}
+\input{results}
+%\section{Results}
+% \input{discussion}
+\input{conclusion}
+
+% Adjust this to balance last page if not using package
+\IEEEtriggeratref{24}
+\bibliography{socc2018}
+\bibliographystyle{./IEEEtranBST/IEEEtran}
+
+\end{document}
+
