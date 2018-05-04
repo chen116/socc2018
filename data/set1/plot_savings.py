@@ -201,7 +201,7 @@ for f in files:
     # ax1.plot(x_for_minmax,miny,'r')
     # ax1.plot(x_for_minmax,midy,'pink')
 
-    
+
     # ax1.plot(x_for_minmax,miny,'r',label= 'Target\nFPS\nRange')
 
     fontP = FontProperties()

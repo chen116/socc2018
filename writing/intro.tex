@@ -1,14 +1,11 @@
 \section{Introduction}
-% As the research effort for IoT continues, newly developed applications for IoT have stricter timing requirements\cite{iot}. 
-Although cloud computing provides a platform for applications to offload their tasks for its high availability and fast processing speed, the physical distance between the datacenter and the end users introduces latency that is too large for cloud computing to be effective for some time-sensitive applications.
 
-Fog computing is a new paradigm that pushes the processing to the end users\cite{fogo}. Unlike cloud computing which places servers in a centralized datacenter, fog computing distributes servers among the edge that is close to the end users. By offloading and running tasks on the fog servers, latency, as well as the traffic on the backbone network, is reduced.
 
-Even though fog computing provides a solution to latency in relaying data, resource allocation and load balancing while considering deadline misses and total runtime are issues that still need to be addressed\cite{fogr}. In this paper, we use connected car systems as a motivating application to explore load balancing problem in fog computing. Applications that run in connected car system can benefit from fog computing\cite{fogcar}. For example, coordinated lane change assistance\cite{lc1}\cite{lc2} can utilize local fog servers to process data sent from nearby cars and respond quickly\cite{fogcar}. To perform load balancing in fog computing, we need to consider several characteristics of fog computing that are different from cloud computing. First is the heterogeneous nature of fog servers where each fog server can have different computation capability and connectivity\cite{fogo}. And Since the idea of fog computing is to process data locally for faster response, the scale of fog system we are looking at is relatively small compared to a datacenter. The smaller scale of the fog system enables more precise approaches that would otherwise be inappropriate in a large scale cloud environment. Lastly, mobility of the clients is also a feature that should be addressed. The locations of the clients in cloud computing are relatively static compared to those in the case of moving vehicles in a connected car system. In fog computing, the relationship between servers and clients depends on their instantaneous locations. It can be beneficial to use the information about the location and mobility of the cars when trying to perform load balancing. For example, if we can predict the travel patterns of cars, we can pre-allocate resources to the best-fit server to achieve lower processing time and avoid deadline misses. In this paper, we first develop a mobility prediction algorithm and then propose a fog task model followed by a load balancing optimization problem formulation for connected car systems in fog computing.
 
-The main contributions of the paper are:
-
+sdf
+\iffalse
 \begin{enumerate}
+
 %\item We propose a task model that provides a platform to develop load balancing algorithm that does not require the knowledge of how individual task is scheduled by moving the scheduling problem from device level to server level.
 \item We propose a task model that provides a platform to develop load balancing algorithm that does not require the knowledge of how an individual task is scheduled by moving the scheduling problem from device level to server level. It is impractical to obtain the scheduling information about each task because the traffic of the network make the arriving order of tasks a stochastic process and the problem size increase more rapidly.
 \item We propose an optimization problem formulation for load balancing that minimizes deadline misses and total runtime for connected car system in fog computing.
@@ -17,8 +14,5 @@ The main contributions of the paper are:
 The rest of the paper is organized as follows: we review existing works in load balancing for mobile clients in fog computing in Section \ref{s1}. In Section \ref{s2}, we present a simple linear mobility prediction algorithm with high accuracy to show that online task scheduling is beneficial in fog computing. We present our task model and optimization problem formulation in Section \ref{s3}. In Section \ref{s4}, we analyze the performance of the optimization problem formulation. Conclusions and future work are discussed in Section \ref{s5}.
 
 
-\iffalse
-
-Mobility of the clients is also a feature that should be addressed. In cloud computing, location is sometimes taken into consideration to improve performance such as Akamai\cite{aka}.
-
 \fi
+

@@ -5,6 +5,7 @@ preview=open -a /Applications/Preview.app
 upreview=xpdf
 
 all:
+	rm -f *~ *.dvi *.aux *.log *.bbl *.blg *.out *.toc *.spl *.synctex.gz
 	/Library/TeX/texbin/pdflatex ${FLAGS} ${FILE}
 	/Library/TeX/texbin/bibtex ${FILE}
 	/Library/TeX/texbin/pdflatex ${FLAGS} ${FILE}

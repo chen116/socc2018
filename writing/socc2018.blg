@@ -11,48 +11,46 @@ Database file #1: socc2018.bib
 -- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
-Warning--empty author in wave
 
 Done.
-You've used 22 entries,
+You've used 1 entry,
             4039 wiz_defined-function locations,
-            952 strings with 12364 characters,
-and the built_in function-call counts, 18356 in all, are:
-= -- 1480
-> -- 428
-< -- 155
-+ -- 234
-- -- 72
-* -- 930
-:= -- 2736
-add.period$ -- 50
-call.type$ -- 22
-change.case$ -- 23
-chr.to.int$ -- 360
-cite$ -- 23
-duplicate$ -- 1314
-empty$ -- 1494
-format.name$ -- 92
-if$ -- 4253
+            817 strings with 7495 characters,
+and the built_in function-call counts, 1144 in all, are:
+= -- 81
+> -- 36
+< -- 10
++ -- 20
+- -- 7
+* -- 73
+:= -- 174
+add.period$ -- 2
+call.type$ -- 1
+change.case$ -- 1
+chr.to.int$ -- 21
+cite$ -- 1
+duplicate$ -- 72
+empty$ -- 73
+format.name$ -- 8
+if$ -- 245
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 231
-newline$ -- 103
-num.names$ -- 21
-pop$ -- 523
+int.to.str$ -- 1
+missing$ -- 14
+newline$ -- 26
+num.names$ -- 1
+pop$ -- 29
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1399
+skip$ -- 78
 stack$ -- 0
-substring$ -- 865
-swap$ -- 1095
-text.length$ -- 35
+substring$ -- 50
+swap$ -- 69
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 22
-warning$ -- 1
-while$ -- 82
-width$ -- 24
-write$ -- 259
-(There was 1 warning)
+type$ -- 1
+warning$ -- 0
+while$ -- 4
+width$ -- 2
+write$ -- 33

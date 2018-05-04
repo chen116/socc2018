@@ -54,7 +54,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
-\title{\huge{Automated Feedback-Based Vertical Elasticity for Heterogenous Soft Real-time Workloads}}
+\title{\huge{Automated Feedback-Based Vertical Elasticity for Heterogenous Soft Real-Time Workloads}}
 
 \author{
 % Author Block
@@ -116,25 +116,22 @@ Email: \{aritten, gtran, jwalters, crago\}@isi.edu}
 
 
 \begin{abstract}
-Cloud computing provides a pool of highly available resources for applications to offload their tasks to, but new applications such as coordinated lane change assistance used in connected car system have strict timing requirements that cannot be met by offloading tasks only to the cloud. Fog computing reduces latency by bringing the computation from remote datacenter to local fog servers, which are connected in close proximity with the clients.  Although fog computing lowers the latency for transferring data, load balancing among fog servers still needs to be addressed for better timing performance. The challenges include large number of tasks, mobility of the clients, and the heterogeneity of the fog servers. In this paper, using connected car systems as a motivating application, we first show that we can utilize mobility patterns of vehicles to perform periodic load balancing in fog servers. We then present a task model that solves the scheduling problem at the server level instead of device level. And finally we formulate a load balancing optimization problem for minimizing deadline misses and total runtime for connected car system in fog computing. We show that it outperforms some common heuristics such as weighted round robin, active monitoring, and throttled load balancer.
-
-\iffalse In fog computing, servers and the clients are connected in close proximity. Computation is brought from the remote datacenter to local servers, thus data can be processed and response faster. Applications cloud provides a pool of highly available resources for applications to offload their tasks to, but new applications such as coordinated lane change assistance for self-driving car has strict timing requirements that cannot be met by only running it in the cloud. Although fog computing lowers the latency for transferring data, load balancing and task distribution within local servers still need to be addressed for better timing performance. The challenges of minimizing deadline misses and runtime in fog computing come with the mobility of the clients, high number of tasks, and the heterogeneity of the local fog servers. In this paper, using lane change assistance for self-driving car as example application, we first show that we can use mobility of cars to perform periodic online scheduling in local servers. Secondly, we present a task scheduling model that can reduce the problem size. And finally we propose a task distribution optimization formulation that outperform commonly used load balancing algorithm such as weighted round robin, active monitoring, and throttled load balancer.
-\fi
-
-\iffalse Applications offload tasks to the cloud for its highly available resources and fast processing speed. But new applications such as coordinated lane change assistance for self-driving car has stricter timing requirements that cannot be met by offloading tasks to the cloud. In fog computing, fog servers and the clients are connected in close proximity. Computation is brought from the remote datacenter to local servers, thus data can be processed and response faster. The challenges of minimizing deadline misses and runtime in fog computing come with the mobility of the clients, high number of tasks, and the heterogeneity of the local fog servers. In this paper, using lane change assistance for self-driving car as example application, we first show that mobility of cars can be predicted with high accuracy ~95\% with a simple linear prediction mechanism.  Secondly, we present a task scheduling model that can reduce the problem size. And finally we propose a task distribution optimization formulation that outperform commonly used load balancing algorithm such as weighted round robin, active monitoring, and throttled load balancer.
-\fi
+ 
+Cloud computing provides a virtualized platform for running various services, including soft real-time applications such as video streaming. To meet application's real-time requirements, system resource is often over allocated which results in system underutilization. To solve this problem, we present, ANCHORS, a framework that allows user to implement their own resource allocation algorithm that utilizes real-time performance feedback. We then present two resource allocation algorithms that are based on TCP congestion control and PID control respectively. We implement ANCHORS on a video streaming object detection application and show that ANCHORS can save more than 50\% CPU utilization while still meeting deadlines 97\% of the time. Finally, we present a Stride scheduling based algorithm to maintain application's real-time performance when the total resource demand is greater than system’s available resource. Through experiments, we show that ANCHORS can avoid more than 50\% of deadline misses in an oversubscribed system where no deadlines are met without ANCHORS. 
 
 
 \end{abstract}
 
 \begin{IEEEkeywords}
-fog computing; load balancing; real-time; task distribution; deadline misses; connected car; mobility prediction
+soft real-time; vertical elasticity; feedback-based controller; resource allocation
 \end{IEEEkeywords}
 
+% \input{test}
 \input{intro}
 \input{related}
 \input{background}
-\input{setup}
+\input{framework}
+\input{controller}
 \input{results}
 %\section{Results}
 % \input{discussion}

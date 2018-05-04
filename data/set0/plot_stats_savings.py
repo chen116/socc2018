@@ -78,6 +78,7 @@ line = ax.plot([ind[0] - width*1.5,ind[-1] + width*1.5],[100,100],'k')
 
 
 ax.set_ylabel('Average CPU Utilization Rate Savings(%)')
+
 # ax.set_title('Scores by group and gender')
 ax.set_xticks(ind)
 ax.set_xticklabels(('Region 1\n(Medium Workload)', 'Region 2\n(Light Workload)', 'Region 3\n(Heavy Workload)'))

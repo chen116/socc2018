@@ -1,8 +1,9 @@
 from os import listdir
 from os.path import isfile, join
 onlyfiles = [f for f in listdir('./') if isfile(join('./', f))]
+# print(onlyfiles)
 
-files = [ f for f in onlyfiles if "savings_" in f]
+files = [ f for f in onlyfiles if "2vm_" in f]
 print(files)
 
 
@@ -16,44 +17,40 @@ from matplotlib.widgets import CheckButtons
 
 import time
 for f in files:
+
+
     fig = plt.figure(figsize=(10, 7))
     ax1 = fig.add_subplot(2,1,1)
     ax2 = fig.add_subplot(2,1,2)
     buf = 1000
     show_frames=1
-    show_anchors=1
+    show_anchors=0
     show_dummies=0
-    show_ts=1
+    show_ts=0
     font_per = [{'family': 'serif',
             'color':  'k',
-            'size': 10,
+            'size': 12,
             },{'family': 'serif',
             'color':  'k',
             # 'weight': 'bold',
-            'size': 12,
+            'size': 24,
             }]
 
     ax_rtxen = plt.axes([0, 0.91, 0.2, 0.12])
-    ax_rtxen.text(0.06,0.42,'Average RT-Xen CPU\nutilization(%/sec):',fontdict=font_per[0])
+    ax_rtxen.text(0.06,0.42,'Average VM1 CPU Utilization(%/sec):',fontdict=font_per[0])
     ax_rtxen_txt = ax_rtxen.text(0.1,0.01,'%.2f%%'%(0),fontdict=font_per[1])
     ax_rtxen.axis('off')
 
-    ax_rtxen_inrange = plt.axes([0.2, 0.91, 0.2, 0.12])
-    ax_rtxen_inrange.text(0.06,0.42,'Average RT-Xen CPU\nutilization(%/sec):',fontdict=font_per[0])
-    ax_rtxen_inrange_txt = ax_rtxen_inrange.text(0.1,0.01,'%.2f%%'%(0),fontdict=font_per[1])
-    ax_rtxen_inrange.axis('off')
- 
-
 
     ax_xen = plt.axes([0.65, 0.91, 0.2, 0.12])
-    ax_xen.text(0.08,0.42,'Average Credit CPU\nutilization(%/sec):',fontdict=font_per[0])
-    ax_xen_txt = ax_xen.text(0.1,0.01,'%.2f%%'%(0),fontdict=font_per[1])
+    ax_xen.text(0.08,0.42,'Average VM2 CPU Utilization(%/sec):',fontdict=font_per[0])
+    ax_xen_txt = ax_xen.text(0.4,0.01,'%.2f%%'%(0),fontdict=font_per[1])
     ax_xen.axis('off')
 
     last_ts=[15,15]
 
-
     maxx=30000
+
 
 
     pullData = open(f,"r").read()
@@ -65,6 +62,7 @@ for f in files:
 
     x = []
     hrs = []
+    cpus_xs  =[]
     cpus = []
     anchor_xs = []
     anchors = []
@@ -75,10 +73,12 @@ for f in files:
     ts_xs = []
     ts = []
     event_last_happened_at_cnt=[-1,-1]
+    event_cnt_x=[]
 
     for i in range(2):
         x.append([])
-        hrs.append([])        
+        hrs.append([])  
+        cpus_xs.append([])    
         cpus.append([])
         anchor_xs.append([])
         anchors.append([])
@@ -108,9 +108,7 @@ for f in files:
             if len(line)==3+1:
                 x[index].append(float(line[-1])-time_start)
                 hrs[index].append(float(line[1]))
-                if float(line[1])>maxhrs:
-                    maxhrs=float(line[1])
-                cpus[index].append(float(line[2])/(1)*100)
+
             if len(line)==2+1:
                 # print(line)
                 anchor_xs[index].append(float(line[-1])-time_start)
@@ -130,32 +128,12 @@ for f in files:
                 ts[index].append(int(line[1]))
                 last_ts[index]=int(line[1])
                 event_last_happened_at_cnt[index]=cnt
-            # if len(line)==3:
-            #     x[index].append(cnt)
-            #     hrs[index].append(float(line[1]))
-            #     if float(line[1])>maxhrs:
-            #         maxhrs=float(line[1])
-            #     cpus[index].append(float(line[2])/(1)*100)
-            # if len(line)==2:
-            #     anchor_xs[index].append(cnt)
-            #     anchors[index].append(int(line[1]))
-            #     event_last_happened_at_cnt[index]=cnt
+            if len(line)==7+1:
+                cpus_xs[index].append(float(line[-1])-time_start)
+                cpus[index].append(float(line[1])*100)
 
-            # if len(line)==4:
-            #     frame_xs[index].append(cnt)
-            #     frames[index].append(int(line[1]))
-            #     event_last_happened_at_cnt[index]=cnt
-
-            # if len(line)==5:
-            #     dummy_x[index-2].append(cnt)
-            #     dummy_hrs[index-2].append(float(line[1]))
-            # if len(line)==6:
-            #     ts_xs[index].append(cnt)
-            #     ts[index].append(int(line[1]))
-            #     last_ts[index]=int(line[1])
-            #     event_last_happened_at_cnt[index]=cnt
-
-            cnt+=1
+            if len(line)!=7+1:
+                cnt+=1
     min_max = []
     for eachLine in minmaxArray:
         if len(eachLine)>1:
@@ -164,11 +142,12 @@ for f in files:
 
     ax1.clear()
     ax2.clear()
-    sched=["RT-Xen","Credit"]
-    colrs = ['blue','limegreen']
+    sched=["VM1","VM2"]
+    colrs = ['blue','skyblue']
+    colrs = ['g','lightgreen']
     for i in range(len(x)):
         ax1.scatter(x[i],hrs[i],s= ((1)%2)*6+5 ,label= sched[i] ,color=colrs[i])
-        ax2.plot(x[i],cpus[i],color=colrs[i],lw=((i+1)%2)+3,label= sched[i] )
+        ax2.plot(cpus_xs[i],cpus[i],color=colrs[i],lw=((i+1)%2)+3,label= sched[i] )
         # tmp=[]
         # for j in range(len(cpus[i])):
         #     tmp.append(100-cpus[i][j])
@@ -193,16 +172,18 @@ for f in files:
         midy.append(min_max[0]/2+min_max[1]/2)
 
 
+
     # if time_start>0 and time_end>0 and len(miny)>1:
     #     ax1.plot([0,time_end-time_start],miny[0:2],'r')
     #     # ax1.plot([0,time_end-time_start],[(miny[0]+maxy[0])/2,(miny[0]+maxy[0])/2],'pink')
     #     ax1.plot([0,time_end-time_start],[(miny[0]+maxy[0])/2,(miny[0]+maxy[0])/2],'pink')
-    #     ax1.plot([0,time_end-time_start],maxy[0:2],'r',label= 'Target\nFPS\nInterval')q
+    #     ax1.plot([0,time_end-time_start],maxy[0:2],'r',label= 'Target\nFPS\nInterval')
     # ax1.plot(x_for_minmax,miny,'r')
     # ax1.plot(x_for_minmax,midy,'pink')
-
-    
     # ax1.plot(x_for_minmax,miny,'r',label= 'Target\nFPS\nRange')
+
+
+
 
     fontP = FontProperties()
     fontP.set_size('small')
@@ -216,7 +197,7 @@ for f in files:
     #     rtxen_fps = hrs[0][-1]
     #     credit_fps = hrs[1][-1]
     #     per=(rtxen_fps-credit_fps)/credit_fps*100
-   
+
 
     try:
         hrs_after_event_rtxen=0
@@ -240,18 +221,18 @@ for f in files:
 
     area_under_curve_rtxen=0
     area_under_curve_xen=0
-    if len(x[1])>0:
-        for i in range(1,len(x[1])):
-            area_under_curve_xen+=cpus[1][i-1]*(x[1][i]-x[1][i-1])
-    if len(x[0])>0:
-        for i in range(1,len(x[0])):
-            area_under_curve_rtxen+=cpus[0][i-1]*(x[0][i]-x[0][i-1])
+    if len(cpus_xs[1])>0:
+        for i in range(1,len(cpus_xs[1])):
+            area_under_curve_xen+=cpus[1][i-1]*(cpus_xs[1][i]-cpus_xs[1][i-1])
+    if len(cpus_xs[0])>0:
+        for i in range(1,len(cpus_xs[0])):
+            area_under_curve_rtxen+=cpus[0][i-1]*(cpus_xs[0][i]-cpus_xs[0][i-1])
 
 
     if area_under_curve_xen>0:
-        ax_xen_txt.set_text('%.2f%%'%(area_under_curve_xen/(x[1][-1]-x[1][0])))
+        ax_xen_txt.set_text('%.2f%%'%(area_under_curve_xen/(cpus_xs[1][-1]-cpus_xs[1][0])))
     if area_under_curve_rtxen>0:
-        ax_rtxen_txt.set_text('%.2f%%'%(area_under_curve_rtxen/(x[0][-1]-x[0][0])))
+        ax_rtxen_txt.set_text('%.2f%%'%(area_under_curve_rtxen/(cpus_xs[0][-1]-cpus_xs[0][0])))
 
     # ax1.set_title('RT-Xen improved by: %.2f %%'%(per)+"\n",loc='right',fontdict=font_per[1])
     # ax1.set_title(r'$\frac{RT-Xen\'s improvement}{Percentage}$ = %.2f %%'%(per)+"\n",loc='right',fontsize=18)
@@ -263,18 +244,33 @@ for f in files:
     ax2.set_ylabel('Assigned CPU Utilization(%)')
     # ax2.set_ylim( 45, 105 )  
     ax2.set_ylim( -5, 105 )  
+    # ax1.set_xlim(0,200)
+    # ax2.set_xlim(0,200)
     ax=[ax1, ax2]
+
+
+
+
     font = [{'family': 'serif',
-            'color':  'dodgerblue',
+            'color':  'b',
             'weight': 'bold',
             'size': 8,
             },{'family': 'serif',
-            'color':  'forestgreen',
+            'color':  'skyblue',
             'weight': 'bold',
             'size': 8,
             }]
-    colrs = ['dodgerblue','forestgreen']
-
+    colrs = ['b','skyblue']
+    font = [{'family': 'serif',
+            'color':  'g',
+            'weight': 'bold',
+            'size': 8,
+            },{'family': 'serif',
+            'color':  'lightgreen',
+            'weight': 'bold',
+            'size': 8,
+            }]
+    colrs = ['g','lightgreen']
     if show_anchors:
         for i in range(len(anchor_xs)):
             for j in range(len(anchor_xs[i])):

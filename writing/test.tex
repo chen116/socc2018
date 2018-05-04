@@ -1,0 +1,146 @@
+\section{Test}
+
+
+
+\begin{table}[]
+\centering
+\caption{1vm rtds cpu savings}
+\label{my-label}
+\begin{tabular}{|c|c|c|c|}
+\hline
+ & \begin{tabular}[c]{@{}c@{}}Region1\\ (Heavy \\ Workload)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Region2\\ (Light \\ Workload)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Region3\\ (Medium \\ Workload)\end{tabular} \\ \hline
+AIMD& 5.84\% & 48.77\% & 36.83\%  \\ \hline
+APID& 11.3\% & 54.9\% & 35.5\%  \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[]
+\centering
+\caption{1vm credit cpu savings}
+\label{my-label}
+\begin{tabular}{|c|c|c|c|}
+\hline
+ & \begin{tabular}[c]{@{}c@{}}Region1\\ (Heavy \\ Workload)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Region2\\ (Light \\ Workload)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Region3\\ (Medium \\ Workload)\end{tabular} \\ \hline
+AIMD& 2.49\% & 52.56\% & 42.35\%  \\ \hline
+APID& 3.33\% & 57.16\% & 36.75\%  \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[]
+\centering
+\caption{1vm rtds above min}
+\label{my-label}
+\begin{tabular}{|c|c|c|c|}
+\hline
+ & \begin{tabular}[c]{@{}c@{}}Region1\\ (Heavy \\ Workload)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Region2\\ (Light \\ Workload)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Region3\\ (Medium \\ Workload)\end{tabular} \\ \hline
+AIMD& 100.0\% & 100.0\% & 96.3\%  \\ \hline
+APID& 100.0\% & 97.37\% & 96.49\%  \\ \hline
+STATIC& 100.0\% & 100.0\% & 100.0\%  \\ \hline
+
+\end{tabular}
+\end{table}
+
+\begin{table}[]
+\centering
+\caption{1vm credit above min}
+\label{my-label}
+\begin{tabular}{|c|c|c|c|}
+\hline
+ & \begin{tabular}[c]{@{}c@{}}Region1\\ (Heavy \\ Workload)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Region2\\ (Light \\ Workload)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Region3\\ (Medium \\ Workload)\end{tabular} \\ \hline
+AIMD& 100.0\% & 100.0\% & 96.3\%  \\ \hline
+APID& 99.3\% & 93.59\% & 97.32\%  \\ \hline
+STATIC& 100.0\% & 100.0\% & 100.0\%  \\ \hline
+
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}[]
+\centering
+\caption{3vm rand above min}
+\label{my-label}
+\begin{tabular}{|c|c|c|}
+\hline
+ & VM1 & VM2 \\ \hline
+AIMD& 94.89\% & 96.47\%  \\ \hline
+APID& 91.48\% & 93.02\%  \\ \hline
+STATIC& 100.0\% & 100.0\%  \\ \hline
+
+\end{tabular}
+\end{table}
+
+
+\begin{table}[]
+\centering
+\caption{3vm above min}
+\label{my-label}
+\begin{tabular}{|c|c|c|}
+\hline
+ & VM1 & VM2 \\ \hline
+AIMD& 98.39\% & 98.41\%  \\ \hline
+APID& 97.83\% & 96.79\%  \\ \hline
+STATIC& 100.0\% & 100.0\%  \\ \hline
+
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}[]
+\centering
+\caption{mat rand}
+\label{my-label}
+\begin{tabular}{|c|c|}
+\hline
+\multicolumn{1}{|l|}{} & \multicolumn{1}{l|}{Computation Counts} \\ \hline
+AIMD & 963 \\ \hline
+APID & 964 \\ \hline
+STATIC & 453 \\ \hline
+
+\end{tabular}
+\end{table}
+
+\begin{table}[]
+\centering
+\caption{mat}
+\label{my-label}
+\begin{tabular}{|c|c|}
+\hline
+\multicolumn{1}{|l|}{} & \multicolumn{1}{l|}{Computation Counts} \\ \hline
+AIMD & 898 \\ \hline
+APID & 911 \\ \hline
+STATIC & 448 \\ \hline
+
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}[]
+\centering
+\caption{2vm vm1 above min}
+\label{my-label}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\multicolumn{1}{|l|}{} & Region1 & Region2 & Region3 & Region4 \\ \hline
+AIMD& 100.0\% & 100.0\% & 54.17\% & 100.0\%  \\ \hline
+APID& 96.43\% & 81.13\% & 77.63\% & 89.61\%  \\ \hline
+STATIC& 100.0\% & 100.0\% & 2.9\% & 0.0\%  \\ \hline
+
+\end{tabular}
+\end{table}
+
+\begin{table}[]
+\centering
+\caption{2vm vm2 above min}
+\label{my-label}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\multicolumn{1}{|l|}{} & Region1 & Region2 & Region3 & Region4 \\ \hline
+AIMD& 100.0\% & 95.18\% & 56.34\% & 100.0\%  \\ \hline
+APID& 98.21\% & 95.0\% & 50.82\% & 94.44\%  \\ \hline
+STATIC& 100.0\% & 2.74\% & 0.0\% & 100.0\%  \\ \hline
+
+\end{tabular}
+\end{table}

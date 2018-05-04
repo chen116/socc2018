@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  30 APR 2018 09:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  4 MAY 2018 14:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -613,302 +613,77 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 116.
- (./intro.tex
-Underfull \vbox (badness 4543) has occurred while \output is active []
+Missing character: There is no â in font ptmb7t!
+Missing character: There is no € in font ptmb7t!
+Missing character: There is no ™ in font ptmb7t!
+ (./intro.tex)
+(./related.tex
+Underfull \hbox (badness 1454) in paragraph at lines 13--14
+[]\OT1/ptm/m/n/10 Dynamic vir-tual ma-chine al-lo-ca-tion pol-icy in cloud
+ []
 
- [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-
-
-]) (./related.tex) (./background.tex
-Missing character: There is no Â in font ptmr7t!
-Missing character: There is no   in font ptmr7t!
- <images/car_rep.png, id=103, 607.068pt x 535.7616pt>
-File: images/car_rep.png Graphic file (type png)
-
-<use images/car_rep.png>
-Package pdftex.def Info: images/car_rep.png used on input line 13.
-(pdftex.def)             Requested size: 182.93344pt x 161.44095pt.
+) (./background.tex) (./framework.tex
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
- [2 <./images/car_rep.png>]
-<images/car_model_rep.png, id=125, 448.074pt x 348.8232pt>
-File: images/car_model_rep.png Graphic file (type png)
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+) (./controller.tex
 
-<use images/car_model_rep.png>
-Package pdftex.def Info: images/car_model_rep.png used on input line 26.
-(pdftex.def)             Requested size: 121.95563pt x 94.93933pt.
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 4.
 
-<images/car_7.png, id=130, 394.5942pt x 387.3672pt>
-File: images/car_7.png Graphic file (type png)
- <use images/car_7.png>
-Package pdftex.def Info: images/car_7.png used on input line 37.
-(pdftex.def)             Requested size: 121.95563pt x 119.72203pt.
-
-<images/car_res.png, id=131, 519.9425pt x 390.45876pt>
-File: images/car_res.png Graphic file (type png)
-
-<use images/car_res.png>
-Package pdftex.def Info: images/car_res.png used on input line 45.
-(pdftex.def)             Requested size: 243.91125pt x 183.17007pt.
-) (./setup.tex [3 <./images/car_model_rep.png> <./images/car_7.png> <./images/c
-ar_res.png>]
-<images/opt_rep.png, id=156, 729.72626pt x 406.51875pt>
-File: images/opt_rep.png Graphic file (type png)
-
-<use images/opt_rep.png>
-Package pdftex.def Info: images/opt_rep.png used on input line 24.
-(pdftex.def)             Requested size: 243.91125pt x 135.87602pt.
- <images/opt_gen.png, id=157, 504.4446pt x 379.1766pt>
-File: images/opt_gen.png Graphic file (type png)
-
-<use images/opt_gen.png>
-Package pdftex.def Info: images/opt_gen.png used on input line 31.
-(pdftex.def)             Requested size: 195.12975pt x 146.67484pt.
+) (./results.tex [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/p
+dftex.map}
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-<images/opt_agg.png, id=159, 524.96124pt x 219.82124pt>
-File: images/opt_agg.png Graphic file (type png)
-
-<use images/opt_agg.png>
-Package pdftex.def Info: images/opt_agg.png used on input line 77.
-(pdftex.def)             Requested size: 243.91125pt x 102.13531pt.
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 86.
-
-LaTeX Font Info:    Calculating math sizes for size <> on input line 89.
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <> not available
-(Font)              size <5> substituted on input line 89.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 89.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 89.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <> not available
-(Font)              size <5> substituted on input line 89.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.7> not available
-(Font)              size <5> substituted on input line 89.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.5> not available
-(Font)              size <5> substituted on input line 89.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <> not available
-(Font)              size <5> substituted on input line 89.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 89.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 89.
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 94.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4 <./images/opt_rep.png> <./images/opt_gen.png> <./images/opt_agg.png>]
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 102.
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 110.
-
-<images/opt_ill.png, id=191, 566.5968pt x 231.264pt>
-File: images/opt_ill.png Graphic file (type png)
- <use images/opt_ill.png>
-Package pdftex.def Info: images/opt_ill.png used on input line 158.
-(pdftex.def)             Requested size: 243.91125pt x 99.55449pt.
-
-Underfull \vbox (badness 1910) has occurred while \output is active []
-
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 170.
-
-) (./results.tex [5 <./images/opt_ill.png>]
-Overfull \hbox (2.85013pt too wide) in paragraph at lines 43--43
-[]|$\OML/cmm/m/it/9 N[]$| 
+]
+Underfull \hbox (badness 3514) in paragraph at lines 73--75
+ \OT1/ptm/m/it/10 2) Ex-per-i-ment 2: Mon-i-tor across Mul-ti-ple VMs: [][][] 
  []
 
 
-Overfull \hbox (5.12877pt too wide) in paragraph at lines 45--45
-[]|$\OML/cmm/m/it/9 B[]$| 
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
+
  []
 
 
-Overfull \hbox (2.05833pt too wide) in paragraph at lines 47--47
-[]|$\OML/cmm/m/it/9 C[]$| 
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
+
  []
 
 
-Underfull \hbox (badness 4846) in paragraph at lines 49--50
-[]|\OT1/ptm/m/n/9 CPU fre-quency of cloud server
+Underfull \hbox (badness 10000) in paragraph at lines 84--85
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--65
-[]|\OT1/ptm/m/n/9 Range
+Underfull \hbox (badness 10000) in paragraph at lines 90--92
+[]
  []
 
 
-Underfull \hbox (badness 3098) in paragraph at lines 65--65
-\OT1/ptm/m/n/9 for $\OML/cmm/m/it/9 N[]$
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--66
-[]|\OT1/ptm/m/n/9 Total
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--66
-\OT1/ptm/m/n/9 num-ber
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
+
  []
 
 
-Overfull \hbox (1.60516pt too wide) in paragraph at lines 63--69
- [][] 
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
+
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/res_opt_vs_opt_mdp.png, id=223, 562.1pt x 421.575pt>
-File: images/res_opt_vs_opt_mdp.png Graphic file (type png)
-
-<use images/res_opt_vs_opt_mdp.png>
-Package pdftex.def Info: images/res_opt_vs_opt_mdp.png used on input line 78.
-(pdftex.def)             Requested size: 243.91125pt x 182.93335pt.
-
-<images/res_opt_vs_opt_timep.png, id=224, 562.1pt x 421.575pt>
-File: images/res_opt_vs_opt_timep.png Graphic file (type png)
-
-<use images/res_opt_vs_opt_timep.png>
-Package pdftex.def Info: images/res_opt_vs_opt_timep.png used on input line 86.
-
-(pdftex.def)             Requested size: 243.91125pt x 182.93335pt.
- [6 <./images/res_opt_vs_opt_mdp.png (PNG copy)> <./images/res_opt_vs_opt_timep
-.png (PNG copy)>]
-<images/res_opt_vs_lb_ls_mdp.png, id=240, 562.1pt x 421.575pt>
-File: images/res_opt_vs_lb_ls_mdp.png Graphic file (type png)
-
-<use images/res_opt_vs_lb_ls_mdp.png>
-Package pdftex.def Info: images/res_opt_vs_lb_ls_mdp.png used on input line 120
-.
-(pdftex.def)             Requested size: 243.91125pt x 182.93335pt.
-
-<images/res_opt_vs_lb_ls_timep.png, id=241, 562.1pt x 421.575pt>
-File: images/res_opt_vs_lb_ls_timep.png Graphic file (type png)
-
-<use images/res_opt_vs_lb_ls_timep.png>
-Package pdftex.def Info: images/res_opt_vs_lb_ls_timep.png used on input line 1
-28.
-(pdftex.def)             Requested size: 243.91125pt x 182.93335pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 139--139
-[]|\OT1/ptm/b/n/9 Total
- []
-
-
-Overfull \hbox (1.16045pt too wide) in paragraph at lines 139--139
-[]|\OT1/ptm/b/n/9 12687| 
- []
-
-
-Overfull \hbox (1.16045pt too wide) in paragraph at lines 139--139
-[]|\OT1/ptm/b/n/9 13472| 
- []
-
-
-Overfull \hbox (1.16045pt too wide) in paragraph at lines 139--139
-[]|\OT1/ptm/b/n/9 14143| 
- []
-
-
-Overfull \hbox (1.16045pt too wide) in paragraph at lines 139--139
-[]|\OT1/ptm/b/n/9 14739| 
- []
-
-
-Overfull \hbox (1.16045pt too wide) in paragraph at lines 139--140
-[]|\OT1/ptm/b/n/9 15051| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 141--141
-[]|\OT1/ptm/m/n/9 Optimized,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 143--143
-[]|\OT1/ptm/m/n/9 Local
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 145--145
-[]|\OT1/ptm/m/n/9 Weighted
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 145--145
-\OT1/ptm/m/n/9 Round
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--147
-[]|\OT1/ptm/m/n/9 Active
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 149--149
-[]|\OT1/ptm/m/n/9 Throttled
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 149--149
-\OT1/ptm/m/n/9 Load
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) (./conclusion.tex)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-(./socc2018.bbl [7 <./images/res_opt_vs_lb_ls_mdp.png (PNG copy)> <./images/res
-_opt_vs_lb_ls_timep.png (PNG copy)>]
-Underfull \hbox (badness 3930) in paragraph at lines 130--137
-[]\OT1/ptm/m/n/9 ``Ieee stan-dard for in-for-ma-tion technology-- lo-cal and
- []
-
-
-Underfull \hbox (badness 2088) in paragraph at lines 150--153
-\OT1/ptm/m/n/9 2014-07-17),'' Down-loaded from []$http : / / crawdad . org / ro
-ma /
- []
-
-)
+) (./conclusion.tex) (./socc2018.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -920,53 +695,35 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 148.
-[8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 148.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 145.
+[2]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 145.
  (./socc2018.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 148.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 148.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 145.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 145.
 Package rerunfilecheck Info: File `socc2018.out' has not changed.
-(rerunfilecheck)             Checksum: C22E26A63FB8873CA0CE18831FA895A1;950.
-
-
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 4.5pt have occurred.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 148.
+(rerunfilecheck)             Checksum: 47E502E6E805F6DCE6DDE7419449BC06;1397.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 145.
  ) 
 Here is how much of TeX's memory you used:
- 10161 strings out of 493089
- 155243 string characters out of 6134842
- 271819 words of memory out of 5000000
- 13401 multiletter control sequences out of 15000+600000
- 40343 words of font info for 82 fonts, out of 8000000 for 9000
+ 9986 strings out of 493089
+ 152668 string characters out of 6134842
+ 258104 words of memory out of 5000000
+ 13280 multiletter control sequences out of 15000+600000
+ 38525 words of font info for 75 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 42i,15n,40p,2193b,466s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,16n,40p,2169b,403s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/
-texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texl
-ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/20
-15/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2015/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2015/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2015/texmf-dist/fo
-nts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
-urw/times/utmbi8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times
-/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.p
-fb>
-Output written on socc2018.pdf (8 pages, 892347 bytes).
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/t
+exmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2015/texmf-dist
+/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
+e1/urw/times/utmri8a.pfb>
+Output written on socc2018.pdf (2 pages, 83857 bytes).
 PDF statistics:
- 347 PDF objects out of 1000 (max. 8388607)
- 295 compressed objects within 3 object streams
- 70 named destinations out of 1000 (max. 500000)
- 173 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 141 PDF objects out of 1000 (max. 8388607)
+ 129 compressed objects within 2 object streams
+ 30 named destinations out of 1000 (max. 500000)
+ 169 words of extra memory for PDF output out of 10000 (max. 10000000)
 

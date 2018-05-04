@@ -1,6 +1,13 @@
 \section{Conclusion and Future Work}
 \label{s5}
 
+\cite{lc2} 
 
+container, multi-resource, multi-server and complex learning controller
 
-In this work, we propose a task scheduling model for connected car system in fog computing that brings task scheduling from device level to server level, which reduces the amount of computations required to perform load balancing. We also formulate a load balancing optimization problem that minimizes deadline misses and total runtime. We show that our optimization outperforms some common load balancing algorithms such as weighted round robin, active monitoring, and throttled load balancer. There are many potentials and ideas to expand on this topic including take energy consumption into consideration, vary the parameters dynamically, or implement applications with real workloads. We look forward to pursuing more research in this topic as the development of fog computing and connected car systems continues.
+\begin{enumerate}
+
+%\item We propose a task model that provides a platform to develop load balancing algorithm that does not require the knowledge of how individual task is scheduled by moving the scheduling problem from device level to server level.
+\item We propose a task model that provides a platform to develop load balancing algorithm that does not require the knowledge of how an individual task is scheduled by moving the scheduling problem from device level to server level. It is impractical to obtain the scheduling information about each task because the traffic of the network make the arriving order of tasks a stochastic process and the problem size increase more rapidly.
+\item We propose an optimization problem formulation for load balancing that minimizes deadline misses and total runtime for connected car system in fog computing.
+\end{enumerate}

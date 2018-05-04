@@ -1,5 +1,108 @@
+\section{Evaluations and Discussion}
 
 
+
+
+\subsection{Overhead}
+
+
+
+
+In this section we will measure the latency introduced in the application to record a heartbeat
+
+\subsubsection*{Methodology}
+
+
+
+overhead
+
+\subsection{Application}
+
+Andy
+
+\subsection{Experiments}
+
+We will go over three different experiments to evaluate Anchors.
+
+\subsubsection{Experiment 1: Monitor across Different Scheduler}
+\hfill \linebreak
+In this experiments, we want to evaluate Anchors' ability to monitor and save CPU resource when VMs are running on different subset of cores with different scheduler.
+
+\begin{itemize} 
+\item[--] VM Configuration: \\
+Anchors requires the hypersvisor scheduler to be able to assign specific amount of CPU resource to the VMs. With one VM, under RTDS Scheduler, the amount CPU resource allocated to the VM can be specified by assigning proper period and budget. But for Credit Scheduler, which allocates CPU resource based on weights, it is required to create a dummy VM under the same CPU pool so precise CPU resource allocation can be achieved by assigning proper weights to the dummy and the main VM. To have a fair comparison, we also create a dummy VM for the CPU pool that runs RTDS Scheduler. Both dummy were assigned 1\% of the CPU utilization before every trial.
+The complete VM configuration are shown in table \ref{exp1vmsetup}
+
+\begin{table}[ht]
+\centering
+\caption{My caption}
+\label{exp1vmsetup}
+\begin{tabular}{@{}cccc@{}}
+\toprule
+\textbf{}                     & \textbf{\# of VCPUs}     & \textbf{Scheduler}          & \textbf{\begin{tabular}[c]{@{}c@{}}Initial CPU\\ Utilization\end{tabular}} \\ \midrule
+\rowcolor[HTML]{EFEFEF} 
+{\color[HTML]{333333} VM1}    & {\color[HTML]{333333} 5} & {\color[HTML]{333333} RTDS} & {\color[HTML]{333333} 99\%}                                                \\
+\rowcolor[HTML]{EFEFEF} 
+{\color[HTML]{333333} Dummy1} & {\color[HTML]{333333} 5} & {\color[HTML]{333333} RTDS} & {\color[HTML]{333333} 1\%}                                                 \\
+\rowcolor[HTML]{C0C0C0} 
+VM2                           & 5                        & Credit                      & 99\%                                                                       \\
+\rowcolor[HTML]{C0C0C0} 
+Dummy2                        & 5                        & Credit                      & 1\%                                                                        \\ \bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\item[--] Application:\\
+In this experiment, we run the object detection application for on both VM1 and VM2. The duration of each trial is 120 seconds, the first 40 seconds are running under high workload mode, between 40-80 seconds the workload is switched to light, and finally between 80-120 seconds the workload is switched medium, as shown in figure meow. 
+
+
+\item[--] Methodology:\\
+For each scheduler, three different controllers, static, AIMD and APID are applied. The CPU utilization and FPS data are collected for analysis.
+
+\item[--] Result:\\
+hi
+\end{itemize}
+
+
+
+
+
+\subsubsection{Experiment 2: Monitor across Multiple VMs}
+
+\hfill \linebreak
+In this experiment, we use Anchors to monitor VM1 and VM2 that are running on the same set of PCPU with RTDS scheduler, and shows VM3 is able to benefit from the saved CPU utilization.
+
+
+\begin{itemize} 
+
+\item[--] VM Configuration:\\
+There are three VMs fo this experiment 
+
+\item[--] Application:\\
+\item[--] Methodology:\\
+\item[--] Result:\\
+
+\end{itemize}
+\subsection*{Experiment 3: Monitor under Overloading System}
+
+
+\hfill \linebreak
+In this experiment, we show that Anchors is able to improve the overall real-time performance when the system is not able to provide enough CPU resource to satisfy the total demand from VMs.
+
+
+\begin{itemize} 
+
+\item[--] VM Configuration:\\
+\item[--] Application:\\
+\item[--] Methodology:\\
+\item[--] Result:\\
+
+\end{itemize}
+
+
+
+\iffalse
 \section{Results and Discussion}
 \label{s4}
 
@@ -221,7 +324,7 @@ We compare our optimization result with local static, a simple load balancing me
 
 
 
-
+\fi
 
 
 
