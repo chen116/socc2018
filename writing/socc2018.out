@@ -15,7 +15,8 @@
 \BOOKMARK [2][-]{subsection.6.1}{Overhead}{section.6}% 15
 \BOOKMARK [2][-]{subsection.6.2}{Application}{section.6}% 16
 \BOOKMARK [2][-]{subsection.6.3}{Experiments}{section.6}% 17
-\BOOKMARK [3][-]{subsubsection.6.3.1}{Experiment 1: Monitor across Different Scheduler}{subsection.6.3}% 18
-\BOOKMARK [3][-]{subsubsection.6.3.2}{Experiment 2: Monitor across Multiple VMs}{subsection.6.3}% 19
-\BOOKMARK [1][-]{section.7}{Conclusion and Future Work}{}% 20
-\BOOKMARK [1][-]{section*.4}{References}{}% 21
+\BOOKMARK [3][-]{subsubsection.6.3.1}{Experiment 1: Monitoring VMs with Different Schedulers}{subsection.6.3}% 18
+\BOOKMARK [3][-]{subsubsection.6.3.2}{Experiment 2: Monitoring Multiple VMs}{subsection.6.3}% 19
+\BOOKMARK [3][-]{subsubsection.6.3.3}{Experiment 3: Monitoring VMs in an Overloading System}{subsection.6.3}% 20
+\BOOKMARK [1][-]{section.7}{Conclusion and Future Work}{}% 21
+\BOOKMARK [1][-]{section*.21}{References}{}% 22

@@ -117,13 +117,12 @@ Email: \{aritten, gtran, jwalters, crago\}@isi.edu}
 
 \begin{abstract}
  
-Cloud computing provides a virtualized platform for running various services, including soft real-time applications such as video streaming. To meet application's real-time requirements, system resource is often over allocated which results in system underutilization. To solve this problem, we present, ANCHORS, a framework that allows user to implement their own resource allocation algorithm that utilizes real-time performance feedback. We then present two resource allocation algorithms that are based on TCP congestion control and PID control respectively. We implement ANCHORS on a video streaming object detection application and show that ANCHORS can save more than 50\% CPU utilization while still meeting deadlines 97\% of the time. Finally, we present a Stride scheduling based algorithm to maintain application's real-time performance when the total resource demand is greater than system’s available resource. Through experiments, we show that ANCHORS can avoid more than 50\% of deadline misses in an oversubscribed system where no deadlines are met without ANCHORS. 
-
+Cloud computing provides a virtualized platform for running various services, including soft real-time applications such as video streaming. To satisfy an application’s real-time requirements, CPU resources are often allocated with the amount that satisfies an application’s highest utilization, resulting in system underutilization. To solve this problem, we present ANCHORS, a Xen framework that allows users to implement their own resource allocation algorithm that utilizes real-time performance feedback from the applications that are running in the VMs. We then present and compare two example resource allocation algorithms that are based on TCP congestion control and PID control respectively. We apply ANCHORS to a video stream object detection application and show that ANCHORS can save more than 50\% CPU utilization while still meeting deadlines 97\% of the time. Finally, we present a Stride scheduling based control algorithm to maintain application’s real-time performance when the total resource demand exceeds the system’s available resource. Our results show that ANCHORS can avoid more than 50\% of deadline misses in an oversubscribed system where no deadlines are met without ANCHORS.
 
 \end{abstract}
 
 \begin{IEEEkeywords}
-soft real-time; vertical elasticity; feedback-based controller; resource allocation
+soft real-time; vertical elasticity; feedback-based controller; resource allocation; Xen
 \end{IEEEkeywords}
 
 % \input{test}

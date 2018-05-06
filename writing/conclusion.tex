@@ -1,13 +1,15 @@
 \section{Conclusion and Future Work}
 \label{s5}
-
 \cite{lc2} 
 
-container, multi-resource, multi-server and complex learning controller
+In this work we develop Anchors, a framework in Xen that provides user a platform at the hypervisor level to implement any CPU resource allocation algorithm that uses feedback from soft real-time application. We also present two resource allocation algorithms, AIMD and APID, that dynamically adjusting CPU utilization to the VMs based on their application's soft real-time performance. Finally, we present a Stride scheduling based control algorithm to improve real-time performance in an overloading system. Future work includes implementing Anchors in different visualization platforms such as containers or a multi-servers system. We also plan to expand Anchors to monitor over multiple resources such as memory and network. Finally, learning based  methods such as Q-learning and regression can be used to develop new resource allocation algorithms. 
 
-\begin{enumerate}
+This work was supported by the Office of Naval Research grant \#N00014-16-1-2887.
 
-%\item We propose a task model that provides a platform to develop load balancing algorithm that does not require the knowledge of how individual task is scheduled by moving the scheduling problem from device level to server level.
-\item We propose a task model that provides a platform to develop load balancing algorithm that does not require the knowledge of how an individual task is scheduled by moving the scheduling problem from device level to server level. It is impractical to obtain the scheduling information about each task because the traffic of the network make the arriving order of tasks a stochastic process and the problem size increase more rapidly.
-\item We propose an optimization problem formulation for load balancing that minimizes deadline misses and total runtime for connected car system in fog computing.
-\end{enumerate}
+
+% \begin{enumerate}
+
+% %\item We propose a task model that provides a platform to develop load balancing algorithm that does not require the knowledge of how individual task is scheduled by moving the scheduling problem from device level to server level.
+% \item We propose a task model that provides a platform to develop load balancing algorithm that does not require the knowledge of how an individual task is scheduled by moving the scheduling problem from device level to server level. It is impractical to obtain the scheduling information about each task because the traffic of the network make the arriving order of tasks a stochastic process and the problem size increase more rapidly.
+% \item We propose an optimization problem formulation for load balancing that minimizes deadline misses and total runtime for connected car system in fog computing.
+% \end{enumerate}
